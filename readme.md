@@ -1,4 +1,7 @@
-注意： 
+**注意：**
+
+  Mysql_backup.sh 里：
+  
 * 把 username 替换为实际的用户名；
 * 把 password 替换为实际的密码； 
 * 把 DatabaseName 替换为实际的数据库名；
@@ -37,14 +40,14 @@
 
 > `mysqldump -u 用户名 -p 数据库名 > 导出的文件名`
 
-> `mysqldump -u linuxde -p smgp_apps_linuxde > linuxde.sql`
+> `mysqldump -u linuxde -p apps_linux > linux.sql`
 
 **导出一个表**
 > `mysqldump -u 用户名 -p 数据库名 表名 > 导出的文件名`
 
-> `mysqldump -u linuxde -p smgp_apps_linuxde users > linuxde_users.sql`
+> `mysqldump -u linuxde -p apps_linux users > linux_users.sql`
 
 **导出一个数据库结构** 
-> `mysqldump -u linuxde -p -d --add-drop-table smgp_apps_linuxde > linuxde_db.sqle_db.sql`
+> `mysqldump -u linuxde -p -d --add-drop-table apps_linux > linux_db.sqle_db.sql`
 
 请结合实际修改即可使用~
