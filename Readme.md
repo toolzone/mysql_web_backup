@@ -21,7 +21,7 @@ chmod u+x Mysql_backup.sh
 chmod u+x Web_backup.sh
 ```
 
-此脚本利用mysqldump命令，mysqldump命令是mysql数据库中备份工具，用于将MySQL服务器中的数据库以标准的sql语言的方式导出，并保存到文件中。
+此脚本利用mysqldump命令，mysqldump命令是mysql数据库中备份工具，用于将MySQL服务器中的数据库以标准的sql语言的方式导出，并保存到文件中。配合 crontab命令 实现自动备份。 
 
 
 ## 知识扩展 
