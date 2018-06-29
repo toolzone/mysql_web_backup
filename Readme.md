@@ -24,10 +24,10 @@ chmod u+x Web_backup.sh
 此脚本利用mysqldump命令，mysqldump命令是mysql数据库中备份工具，用于将MySQL服务器中的数据库以标准的sql语言的方式导出，并保存到文件中。
 
 
-* 知识扩展 *
+## 知识扩展 
 
 
-* mysqldump(选项)
+### mysqldump(选项)
 ```
 --add-drop-table：在每个创建数据库表语句前添加删除数据库表的语句；
 --add-locks：备份数据库表时锁定数据库表；
@@ -47,7 +47,8 @@ chmod u+x Web_backup.sh
 --user：连接MySQL服务器的用户名。
 
 ```
-### > 实例
+**实例**
+
 **导出整个数据库**
 ```
 语法：
@@ -69,15 +70,16 @@ mysqldump -u linuxde -p apps_linux users > linux_users.sql
 mysqldump -u linuxde -p -d --add-drop-table apps_linux > linux_db.sqle_db.sql
 ```
 
-* crontab(选项)(参数)
-crontab文件：指定包含待执行任务的crontab文件。
+## crontab(选项)(参数)
+
+crontab文件：指定包含待执行任务的crontab文件,选项:
 ```
 -e：编辑该用户的计时器设置；
 -l：列出该用户的计时器设置；
 -r：删除该用户的计时器设置；
 -u<用户名称>：指定要设定计时器的用户名称。
 ```
-crontab文件的含义：用户所建立的crontab文件中，每一行都代表一项任务，每行的每个字段代表一项设置，它的格式共分为六个字段，前五段是时间设定段，第六段是要执行的命令段，格式如下：
+用户所建立的crontab文件中，每一行都代表一项任务，每行的每个字段代表一项设置，它的格式共分为六个字段，前五段是时间设定段，第六段是要执行的命令段，格式如下：
 ```
 minute   hour   day   month   week   command     顺序：分 时 日 月 周
 ```
