@@ -2,8 +2,8 @@
 #自动备份脚本
 
 #定义所需变量
-BAKE_PATH="/opt"								#备份后存放目录
-LOG_PATH="/var/myql_backup.log"					#备份日志存放目录及日志名称
+BAKE_PATH="/opt"					#备份后存放目录
+LOG_PATH="/var/myql_backup.log"				#备份日志存放目录及日志名称
 filename="`date '+%F'`_DatabaseName.tar.gz"		#备份存放文件名称
 to_file="$BAKE_PATH/$filename"
 
@@ -11,7 +11,7 @@ to_file="$BAKE_PATH/$filename"
 ERR_QUIT=1
 
 #自动删除删除超期文件
-#保留30多少天前的文件
+#保留30多少天的文件
 OVERTIME=30
 #删除超期文件
 find $BAKE_PATH -ctime +$OVERTIME -a -name "*DatabaseName.tar.gz" -exec rm -f {} \;
